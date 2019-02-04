@@ -67,7 +67,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Header title={this.state.resetScore} message={this.state.message} score={this.state.score} topScore={this.state.topScore}></Header>
+        <Header title={this.state.reloadGame} message={this.state.message} score={this.state.score} topScore={this.state.topScore}></Header>
         <div className='jumbotron'><h1>Clicky Game!</h1> <br></br>
             <h2>Click on an image to earn points, but don't click on any more than once!</h2></div>
           {this.state.images.map(images => (
