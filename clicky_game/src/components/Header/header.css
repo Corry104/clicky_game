@@ -18,4 +18,17 @@
   margin-left: 150px;
 }
 
+.correct {
+  -webkit-animation: color-change 0.6s infinite ;
+ }
+ 
+ @-webkit-keyframes color-change {
+  0% { color:#31b1804d; }
+  50% { color: #31b180; }
+  100% { color: #31b1804d; }
+ }
+ .incorrect {
+  color: rgb(230, 62, 62);
+}
+
   

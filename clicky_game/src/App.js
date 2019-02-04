@@ -11,6 +11,8 @@ class App extends Component {
     images,
     topScore: 0,
     message: "Click an image to begin!",
+    correct: false,
+    incorrect: false
   };
 
   reloadGame = () => {
@@ -34,6 +36,8 @@ class App extends Component {
     this.setState({
       score: 0,
       message: "incorrect! Click again!",
+      incorrect: true,
+      correct: false
     });
     return true;
   }
@@ -46,7 +50,9 @@ class App extends Component {
           images[i].count = images[i].count + 1;
           this.setState({
             score : this.state.score + 1, 
-            message:"You guessed correctly!"
+            message:"You guessed correctly!",
+            correct: true,
+            incorrect: false
           }, function(){
           if(this.state.score === 12){
             this.setState({
@@ -67,7 +73,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Header title={this.state.reloadGame} message={this.state.message} score={this.state.score} topScore={this.state.topScore}></Header>
+        <Header title={this.state.reloadGame} message={this.state.message} correct={this.state.correct} incorrect={this.state.incorrect} score={this.state.score} topScore={this.state.topScore}></Header>
         <div className='jumbotron'><h1>Clicky Game!</h1> <br></br>
             <h2>Click on an image to earn points, but don't click on any more than once!</h2></div>
           {this.state.images.map(images => (

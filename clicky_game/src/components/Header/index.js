@@ -6,7 +6,7 @@ const Header = props => (
     <li className="title nav-link active">
       <a>Clicky Game{props.title}</a>
     </li>
-    <li className="guesses">
+    <li className="guesses" className={props.correct?"correct": props.incorrect? "incorrect" :""}>
       <a>{props.message}</a>
     </li>
     <li className="score">
