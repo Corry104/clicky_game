@@ -1,0 +1,21 @@
+
+.nav {
+  width: 100%;
+  font-size: 2rem;
+  color: whitesmoke;
+  margin-bottom: 10px;
+  background-color: #2A77AE
+}
+  
+.title {
+  float: left;
+  cursor: pointer;
+  margin-right: 150px;
+}
+  
+.score {
+  float: right;
+  margin-left: 150px;
+}
+
+  
